@@ -1,0 +1,7 @@
+node_modules
+.pytest_cache
+dist
+.env
+.venv
+__pycache__
+.vscode
