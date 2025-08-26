@@ -74,7 +74,7 @@ The system leverages modern tools and libraries to ensure scalability, modularit
    - update API Keys
 
 3. **Set Up NestJS Backend**:
-   [NestJS + Prisma + PostgreSQL Setup Guide](nestjs-user-management\README.md)
+   [NestJS + Prisma + PostgreSQL Setup Guide](nestjs-user-management/README.md)
 
 4. **Set Up Angular Frontend**:
    ```bash
