@@ -1,14 +1,13 @@
 # DocumindRAG
 
-DocumindRAG is a full-stack Retrieval-Augmented Generation (RAG) application designed for document ingestion, embedding generation, and question-answering. It consists of three main components:
+DocumindRAG is a full-stack Retrieval-Augmented Generation (RAG) application designed for document ingestion, embedding generation, and question-answering. It consists of four main components:
 - **Python Backend**: Handles document ingestion, embedding generation, and RAG-driven Q&A.
 - **NestJS Backend**: Manages user authentication, document management, and ingestion controls.
 - **Angular Frontend**: Provides a user-friendly interface for authentication, document management, ingestion monitoring, and Q&A.
+- **Postgress**: Provides the database for user and document data and the vector store for embeddings using pgvector.
 
 The system leverages modern tools and libraries to ensure scalability, modularity, and performance, with a microservices architecture for seamless interaction between components.
   
-  ![alt text](diagram.png)
-
 ## Features
 
 ### Python Backend
@@ -30,7 +29,13 @@ The system leverages modern tools and libraries to ensure scalability, modularit
 - **Q&A Interface**: Allows users to ask questions, view answers, and see relevant document excerpts.
 - **Responsive Design**: Ensures compatibility across devices and browsers with modular, reusable components.
 
+### Postgres
+- **Database**:Stores user data, document metadata, and system configurations for both the Python and NestJS backends.
+- **Vector Store**: : Uses the pgvector extension to store and query document embeddings for efficient similarity search in the RAG pipeline.
+
 ## Architecture
+
+  ![alt text](diagram.png)
 
 - **Python Backend**: Built with FastAPI for asynchronous API handling, LangChain for RAG, and Postgres for embedding storage.
 - **NestJS Backend**: Uses TypeScript and a microservices architecture, integrating with Postgres for user and document data.
