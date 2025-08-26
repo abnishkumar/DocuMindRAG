@@ -1,0 +1,88 @@
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-primary">
+            <div class="text-white text-center">
+                <i class="fas fa-file-alt fa-5x mb-4"></i>
+                <h2 class="mb-3">Welcome to DocManager</h2>
+                <p class="lead">Your trusted document management solution</p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="card card-custom" style="width: 100%; max-width: 400px;">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <h3 class="card-title fw-bold">Sign In</h3>
+                        <p class="text-muted">Enter your credentials to access your account</p>
+                    </div>
+                    @if(error){
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>{{ error }}
+                        <button type="button" class="btn-close" (click)="error = ''"></button>
+                    </div>
+                    }
+
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">username</label>
+                            <input type="username" class="form-control form-control-lg" id="username"
+                                placeholder="Enter your username" formControlName="username"
+                                [class.is-invalid]="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                            @if(loginForm.get('username')?.errors?.['required']){
+                            <div class="invalid-feedback">
+                                Please enter a valid email/username.
+                            </div>
+                            }
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-lg" id="password"
+                                placeholder="Enter your password" formControlName="password"
+                                [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                            @if(loginForm.get('password')?.errors?.['required']){
+                            <div class="invalid-feedback">
+                                Password is required.
+                            </div>
+                            }
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="text-muted text-decoration-none">Forgot password?</a>
+                        </div>
+
+                       
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 btn-custom"
+                            [disabled]="loginForm.invalid || loading">
+                            @if(loading){
+                            <span class="spinner-border spinner-custom me-2"></span>
+                            }
+                            @if(!loading){
+                            <i class="fas fa-sign-in-alt me-2"></i>
+                            }
+                            {{ loading ? 'Signing In...' : 'Sign In' }}
+                        </button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="text-muted">
+                            Don't have an account?
+                            <a routerLink="/register" class="text-decoration-none">Sign up here</a>
+                        </p>
+                        <a href="#" class="text-muted text-decoration-none">
+                            <small>Forgot your password?</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

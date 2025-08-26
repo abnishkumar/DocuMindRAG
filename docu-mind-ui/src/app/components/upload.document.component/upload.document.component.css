@@ -1,0 +1,338 @@
+/* Container styling */
+.container.mt-4 {
+  max-width: 1000px; /* Slightly wider for balanced layout */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Centered content */
+.row.justify-content-center .col-lg-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card styling */
+.card.card-custom {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f1f5f9); /* Subtle gradient */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card.card-custom:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Card header */
+.card-header.bg-primary {
+  background-color: #3498db !important;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 20px;
+}
+
+.card-header h4.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-header i.fas.fa-cloud-upload-alt {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.card-header:hover i.fas.fa-cloud-upload-alt {
+  transform: scale(1.1); /* Subtle animation on hover */
+}
+
+/* Card body */
+.card-body.p-4 {
+  padding: 25px !important;
+}
+
+/* Alert styling */
+.alert.alert-success, .alert.alert-danger {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.alert-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.alert i.fas {
+  font-size: 1.2rem;
+}
+
+.alert .btn-close {
+  padding: 12px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.alert .btn-close:hover {
+  opacity: 1;
+}
+
+/* Drag and drop area */
+.border-2.border-dashed.rounded-3 {
+  border: 2px dashed #e2e8f0;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.border-2.border-dashed.rounded-3.border-primary.bg-light {
+  border-color: #3498db;
+  background-color: #e7f1ff !important;
+}
+
+.border-2.border-dashed.rounded-3 i.fas.fa-cloud-upload-alt.fa-3x {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.border-2.border-dashed.rounded-3:hover i.fas.fa-cloud-upload-alt.fa-3x {
+  color: #3498db;
+}
+
+.border-2.border-dashed.rounded-3 h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.border-2.border-dashed.rounded-3 p.text-muted {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Browse Files button */
+.btn-outline-primary.btn-custom {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  border: 2px solid #3498db;
+  color: #3498db;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-outline-primary.btn-custom:hover {
+  background-color: #3498db;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-primary.btn-custom i.fas.fa-folder-open {
+  font-size: 0.9rem;
+}
+
+/* Selected file display */
+.bg-light.rounded {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+.d-flex.align-items-center i.fas.fa-file.fa-2x {
+  color: #3498db;
+  margin-right: 12px;
+}
+
+.d-flex.align-items-center h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.d-flex.align-items-center small.text-muted {
+  font-size: 0.8rem;
+}
+
+.btn-outline-danger.btn-sm {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger.btn-sm:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.btn-outline-danger.btn-sm i.fas.fa-times {
+  font-size: 0.8rem;
+}
+
+/* Supported formats and guidelines */
+.row .col-md-6 p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.row .col-md-6 ul.list-unstyled {
+  margin: 0;
+}
+
+.row .col-md-6 ul.list-unstyled li {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.row .col-md-6 ul.list-unstyled li i.fas {
+  font-size: 1rem;
+}
+
+/* Action buttons */
+.d-grid.d-md-flex.justify-content-md-end {
+  gap: 10px !important;
+}
+
+.btn-outline-secondary.btn-custom {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  border: 2px solid #6b7280;
+  color: #6b7280;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-outline-secondary.btn-custom:hover {
+  background-color: #6b7280;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-secondary.btn-custom i.fas.fa-times {
+  font-size: 0.9rem;
+}
+
+.btn-primary.btn-custom {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  background-color: #3498db;
+  border: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary.btn-custom:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary.btn-custom:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-primary.btn-custom .spinner-custom {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-color: #ffffff;
+  border-right-color: transparent;
+}
+
+.btn-primary.btn-custom i.fas.fa-upload {
+  font-size: 0.9rem;
+}
+
+/* Progress bar */
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #e2e8f0;
+}
+
+.progress-bar {
+  background-color: #3498db !important;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .container.mt-4 {
+    padding: 0 10px;
+  }
+
+  .card.card-custom {
+    padding: 15px;
+  }
+
+  .card-header h4.card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-header i.fas.fa-cloud-upload-alt {
+    font-size: 1.2rem;
+  }
+
+  .border-2.border-dashed.rounded-3 {
+    padding: 3rem !important;
+  }
+
+  .border-2.border-dashed.rounded-3 h5 {
+    font-size: 1rem;
+  }
+
+  .border-2.border-dashed.rounded-3 p.text-muted {
+    font-size: 0.8rem;
+  }
+
+  .row .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  .row .col-md-6 p {
+    font-size: 0.9rem;
+  }
+
+  .row .col-md-6 ul.list-unstyled li {
+    font-size: 0.8rem;
+  }
+
+  .btn-outline-primary.btn-custom,
+  .btn-outline-secondary.btn-custom,
+  .btn-primary.btn-custom {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}

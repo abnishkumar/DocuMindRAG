@@ -1,0 +1,341 @@
+/* General container styling */
+.container.my-5 {
+  max-width: 900px; /* Slightly wider for a balanced look */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Column styling for centering content */
+.col-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header section with title and button */
+.d-flex.justify-content-between.align-items-center.mb-4 {
+  width: 100%;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h2 i.fas.fa-question-circle {
+  font-size: 1.8rem;
+  color: #3498db;
+  transition: transform 0.3s ease;
+}
+
+h2:hover i.fas.fa-question-circle {
+  transform: scale(1.1); /* Subtle animation on hover */
+}
+
+/* Ask Question button */
+.btn-custom {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-custom:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-custom i.fas.fa-plus {
+  font-size: 0.9rem;
+}
+
+/* Card styling */
+.card.shadow-lg {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #f1f5f9); /* Subtle gradient */
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card.shadow-lg:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Chat container */
+.chat-container {
+  max-height: 450px; /* Increased height for better visibility */
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Custom scrollbar */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Chat messages */
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message styling */
+.message {
+  display: flex;
+  max-width: 85%;
+  animation: slideIn 0.3s ease; /* Smooth slide-in animation */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-user {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.message-ai {
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+.message-content {
+  padding: 12px 18px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+}
+
+.message-user .message-content {
+  background-color: #3498db;
+  color: #ffffff;
+  border-top-right-radius: 3px; /* Sharp edge for user messages */
+}
+
+.message-ai .message-content {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border-top-left-radius: 3px; /* Sharp edge for AI messages */
+}
+
+.message-content:hover {
+  background-color: #f1f5f9; /* Subtle hover effect for AI messages */
+}
+
+.message-user .message-content:hover {
+  background-color: #2980b9; /* Hover effect for user messages */
+}
+
+/* Message header */
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.message-header strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.message-header .text-muted {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+/* Message text */
+.message-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.alert-info {
+  background-color: #e7f1ff;
+  color: #2c5282;
+}
+
+.alert-info .spinner-border {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-color: #2c5282;
+  border-right-color: transparent;
+}
+
+.alert-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-danger .btn-outline-primary {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  border-color: #3498db;
+  color: #3498db;
+  border-radius: 6px;
+}
+
+.alert-danger .btn-outline-primary:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.alert-warning {
+  background-color: #fefcbf;
+  color: #854d0e;
+}
+
+/* Chat form */
+.chat-form .input-group {
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+  border: none;
+  font-size: 0.95rem;
+  padding: 12px 15px;
+  background-color: transparent;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  background-color: #f8fafc;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-primary i.bi.bi-send {
+  font-size: 0.9rem;
+}
+
+/* Invalid feedback */
+.invalid-feedback {
+  font-size: 0.85rem;
+  color: #dc2626;
+  padding: 5px 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .container.my-5 {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h2 i.fas.fa-question-circle {
+    font-size: 1.4rem;
+  }
+
+  .btn-custom {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .card.shadow-lg {
+    padding: 15px;
+  }
+
+  .chat-container {
+    max-height: 350px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .message-content {
+    padding: 10px 14px;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .btn-primary {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
