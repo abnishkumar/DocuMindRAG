@@ -1,0 +1,21 @@
+# langchain
+langchain-community
+langchain 
+langchain-openai
+pydantic
+python-dotenv
+# postgres
+langchain-postgres
+psycopg_binary
+psycopg2
+psycopg2-binary
+pgvector
+psycopg
+# fast api
+fastapi
+uvicorn
+python-multipart
+# reranking
+sentence-transformers
+# ocr
+docling
